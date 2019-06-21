@@ -1,4 +1,4 @@
-myfile = open("rosalind_dna.txt")
+myfile = open("input/rosalind_dna.txt")
 dna_string = myfile.read().strip("\n")
 myfile.close()
 
@@ -9,3 +9,7 @@ for i in count:
             count[i] += 1
             
 print(" ".join(list(map(str, count.values()))))
+
+output = open("output/bases.txt", "w") 
+output.write(" ".join(list(map(str, count.values())))) 
+output.close()
